@@ -1,0 +1,281 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor-principal:#fff;
+    --parágrafo-card:#FABC3F;
+    --bg-color:#282828;
+    --cor-fundo:#000;
+    --cor-footer-1:#E85C0D;
+    --cor-footer-2:#C7253E;
+    --borda-cor:rgba(232, 93, 13, 0.473);
+    --shadow-text:rgba(0, 0, 0, 0.144);
+    --bg-sidebar:#121212;
+    --bg-seach:#242424;
+    --nav-library-cor:#b7b3b6;
+    --cor-footer-link:#a7a7a7;
+    --card-cor:#181818;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-principal);
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: var(--bg-sidebar);
+    padding: 15px;
+    padding-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 14px;
+    border: 2px solid var(--borda-cor);
+    border-radius: 0 0 10px 10px;
+}
+
+.nav-logo img {
+    width: 30px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-seach);
+    padding: 8px 12px;
+    border-radius: 50px;
+    width: 300px;
+}
+
+.search-bar input {
+    background-color: transparent;
+    border: none;
+    color: var(--cor-principal);
+    width: 100%;
+    margin-left: 8px;
+    outline: none;
+}
+
+.nav-button {
+    padding: 8px;
+}
+
+.nav-button button {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: transparent;
+    color: var(--cor-principal);
+    cursor: pointer;
+    border: none;
+    padding-right: 10px;
+}
+
+.nav-button button#enter {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo);
+    cursor: pointer;
+    padding: 9px 20px;
+    border-radius: 50px;
+    transition: 0.3s ease-in;
+}
+
+.nav-button button#enter:hover{
+    background-color: transparent;
+    color: var(--cor-principal);
+}
+
+.nav-library {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-library > img {
+    color: var(--nav-library-cor);
+    width: 20px;
+    cursor: pointer;
+}
+
+.nav-library p {
+    color: var(--nav-library-cor);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.nav-playlist, .nav-poadcast {
+    background-color: var(--bg-seach);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.nav-playlist button, .nav-poadcast button {
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo);
+    font-weight: 600;
+    border: none;
+    padding: 6px 10px;
+    margin-top: 16px;
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 20px;
+    transition: 0.4s ease-in-out;
+}
+
+.nav-playlist button:hover, .nav-poadcast button:hover{
+    background-color: transparent;
+    color: var(--cor-principal);
+}
+
+.nav-playlist p, .nav-poadcast p {
+    font-size: 12px;
+}
+
+.nav-footer {
+    margin-top: auto;
+}
+
+.nav-footer a {
+    color: var(--cor-footer-link);
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 12px;
+    margin-bottom: 8px;
+}
+
+.nav-lang-button > img {
+    width: 14px;
+}
+
+.nav-lang-button {
+    background-color: transparent;
+    border: 1px solid var(--cor-principal);
+    color: var(--cor-principal);
+    padding: 6px 10px;
+    margin-top: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.4s ease-in-out;
+}
+
+.nav-lang-button:hover {
+    background-color: var(--bg-color);
+}
+
+main {
+    padding: 24px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.artists-grid, .albums-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.artist-card, .album-card {
+    background-color: var(--card-cor);
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: rgba(130, 17, 49, 0.021) 0px 10px 20px, rgba(130, 17, 49, 0.082) 0px 6px 6px;
+}
+
+.artist-card:hover, .album-card:hover{
+    background-color: var(--bg-color);
+}
+
+.artist-card img {
+    width: 100%;
+    max-height: 70%;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.album-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.artist-card h3, .album-card h3 {
+    font-size: 12px;
+}
+
+.artist-card p, .album-card p {
+    font-size: 10px;
+    color: var(--parágrafo-card);
+    text-shadow: 0 2px 1px var(--shadow-text);
+}
+
+.content {
+    margin-top: 40px;
+}
+
+.content h2 {
+    margin-bottom: 20px;
+}
+
+.banner {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--cor-footer-1), var(--cor-footer-2));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 14px;
+}
+
+ .banner h2 {
+    font-size: 14px;
+ }
+
+ .banner p {
+    font-size: 10px;
+ }
+
+ .banner button {
+    border-radius: 20px;
+    color: var(--cor-fundo);
+    border: none;
+    padding: 12px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s ease-in;
+ }
+
+  .banner button:hover{
+    background-color: transparent;
+  }

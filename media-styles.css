@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+/* Phones */
+@media(max-width:600px) {
+    .sidebar {
+        width: 500px;
+        padding: 10px;
+        padding-bottom: 70px;
+    }
+
+    .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    }
+
+    .nav-logo img {
+        width: 25px;
+    }
+
+    .search-bar {
+        padding: 5px 10px;
+        width: 50%;
+    }
+
+    .nav-library > img {
+        width: 18px;
+
+    }
+
+    .nav-library p {
+        font-size: 13px;
+    }
+
+    .nav-playlist, .nav-poadcast {
+        padding: 12px;
+    }
+
+    .nav-playlist button, .nav-poadcast button {
+        padding: 3px 8px;
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .artists-grid, .albums-grid {
+        gap: 20px;
+    }
+
+    .artist-card, .album-card {
+        padding: 12px;
+    }
+
+    .artist-card h3, .album-card h3 {
+        font-size: 14px;
+    }
+
+    .artist-card p, .album-card p {
+        font-size: 12px;
+    }
+
+    .banner {
+        padding: 2px 4px;
+    }
+
+
+    .banner button {
+        font-size: 12px;
+        padding: 12px 20px; 
+        width: 50%;
+        margin-right: 5px;
+    }
+
+}
